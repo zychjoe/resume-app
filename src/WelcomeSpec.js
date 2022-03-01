@@ -1,27 +1,16 @@
 import './WelcomeSpec.css';
-import React, { Component } from 'react';
+import React from 'react';
+import Button from './Button.js';
 
-class WelcomeSpec extends Component{
-
-    constructor(props){
-        super(props)
-
-        this.name = props.data.name
-        this.logo_path = props.data.logo_path
-        this.reason1 = props.data.reason1
-        this.reason2 = props.data.reason2
-        this.reason3 = props.data.reason3
-
-    }
-    render(){
-        return <div>
-            <h1>{this.name}</h1>
-            <img src={this.logo_path} alt="a logo" />
-            <p>{this.reason1}</p>
-            <p>{this.reason2}</p>
-            <p>{this.reason3}</p>
-        </div>
-    }
+function WelcomeSpec(props){
+    return <div>
+        <h1>Woah! You work at</h1>
+        <img className="logo" src={props.logo_path} alt={props.name} /><h1>?!?!</h1>
+        <br />
+        <p>That's where I want to work!</p>
+        <br />
+        <Button text="Investigate This Coincidence" onClick={props.buttonClick} />
+    </div>
 }
 
 export default WelcomeSpec

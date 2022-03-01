@@ -1,34 +1,62 @@
 import './App.css'
-import React, {useState, useEffect} from 'react'
-import WelcomeSpec from './WelcomeSpec.js'
-import WelcomeStd from './WelcomeStd'
+import React, {useState} from 'react'
 import users from './users.json'
+import WelcomeSpec from './WelcomeSpec.js'
+import WelcomeStd from './WelcomeStd.js'
+import Investigate from './Investigate.js'
+import AboutMe from './AboutMe.js'
+
+
 
 function App() {
 
+  const [progress, setProgress] = useState("default")
+  const user = users.find(u => u.id == "300000")
+  const [isUser, setIsUser] = useState(user != undefined)
   
-  let currKey = "200000"
-  const user = users.find(user => user.id == currKey)
+  const toInvestigate = () => {
+    setProgress("investigate")
+  }
+  
+  const toAboutMe = () => {
+    setProgress("about")
+    setIsUser(false)
+  }
 
-  if (user != undefined){
+  
+  if (isUser && progress == "investigate"){
     return (
       <div className="App">
-        <header className="App-header">
-          <WelcomeSpec data={user.data} />
-        </header>
+          <Investigate data={user.data} buttonClick={toAboutMe} />
       </div>
     )
   }
-  else{
+
+  else if (isUser){
     return (
-    <div className="App">
-        <header className="App-header">
-          <WelcomeStd />
-        </header>
+      <div className="App">
+        <WelcomeSpec name={user.data.name} logo_path={user.data.logo_path} buttonClick={toInvestigate} />
       </div>
     )
   }
-  
+
+  else if (progress == "about"){
+      return (
+      <div className="App">
+          <AboutMe />
+      </div>
+    )
+  }
+
+  else {
+    return (
+      <div className="App">
+          <WelcomeStd buttonClick={toAboutMe} />
+      </div>
+    )
+  }
 }
 
 export default App;
+
+//BG Green 003527

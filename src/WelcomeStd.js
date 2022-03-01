@@ -1,17 +1,18 @@
 import './WelcomeStd.css';
-import React, { Component } from 'react';
+import React from 'react';
+import Button from './Button.js';
 
-class WelcomeStd extends Component{
-
-    render(){
-        return <div>
-            <h1>Welcome!</h1>
-            <img src="https://www.nydailynews.com/resizer/4JV09OAFGpuAy1hPUSK5rMvTGfM=/1200x0/top/cloudfront-us-east-1.images.arcpublishing.com/tronc/LGGTNSKXKRH6LM53TFE4VDJIYI.jpg" alt="smily face" />
-            <p>This is just</p>
-            <p>a good old-fashioned</p>
-            <p>standard greeting</p>
-        </div>
-    }
+function WelcomeStd(props){
+    return <div>
+        <h1>Hello!</h1>
+        <p>I'm so glad you're here.</p>
+        <br />
+        <p>My name is</p>
+        <h2>Joe Zych</h2>
+        <p>and I'd like to code for you!</p>
+        <br />
+        <Button text="Learn about me" onClick={props.buttonClick} />
+    </div>
 }
 
 export default WelcomeStd
