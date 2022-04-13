@@ -29,7 +29,7 @@ function AboutMe(){
     switch(whichModal) {
         case ("work"):
             return <Modal title="Work Experience"
-                          content={[{ "name" : "Flume" ,
+                          content={[{ "name" : "Flume Internet" ,
                                       "img" : "" ,
                                       "description" : "As a fullstack freelacer, I implement updates and repairs on this local ISP's customer UI. Flume runs a Python front-end and a Go back-end. I report directly to the Head of Software.",
                                       "linkPath" : "https://www.flumeinternet.com/",
@@ -37,15 +37,25 @@ function AboutMe(){
                           onClose={closeModal} />
         case ("projects"):
             return <Modal title="Projects"
-                          content={[{ "name" : "TacoParser" ,
-                                      "img" : <img src={require("./assets/TacoParser_Log.gif")} width="350" height="200"></img> ,
-                                      "description" : "C# .NET Core application where I parse data from a csv file representing locations of US Taco Bells. I then use that data to determine which of the given locations are furthest apart. Tests are written using XUnit and results are logged.",
+                          content={[{ "name" : "Photo Studio Contact App" ,
+                                      "img" : <img src={require("./assets/ContactApp.gif")} width="200" height="320"></img> ,
+                                      "description" : "This app was made to increase customer interaction with a small, body-positive portraiture studio. By integrating this app into the SquareSpace site and replacing the previous SquareSpace created contact form I increased user completion rates by over 30%.",
+                                      "linkPath" : "https://whoyouareboudoir.com/contact",
+                                      "linkText" : "See it in action"  },
+                                    { "name" : "Best Buy CRUD Website" ,
+                                      "img" : <img src={require("./assets/BestBuyCRUD.gif")} width="350" height="250"></img> ,
+                                      "description" : "Using a fictionalized database simulating Best Buy products, the website supports user interaction with the database. All CRUD functions are possible through a simple, cenvenient and clean user interface. ASP.Net MVC at it’s purest!",
                                       "linkPath" : "https://github.com/zychjoe/TacoParser",
                                       "linkText" : "See the code"  },
                                     { "name" : "RonYe Conversations: Dueling APIs" ,
-                                      "img" :  <img src={require("./assets/RonYe_Log.gif")} width="350" height="300"></img> ,
-                                      "description" : "An exercise in API use, I’ve accessed an API with Kanye West quotes and a different API with Ron Swanson Quotes. The app runs in the command line, and allows users to chose what they believe is the funniest conversation combining the thoughts of these two dynamic characters.",
-                                      "linkPath" : "https://github.com/zychjoe/RonYe",
+                                        "img" :  <img src={require("./assets/RonYe_Log.gif")} width="350" height="300"></img> ,
+                                        "description" : "An exercise in API use, I’ve accessed an API with Kanye West quotes and a different API with Ron Swanson Quotes. The app runs in the command line, and allows users to chose what they believe is the funniest conversation combining the thoughts of these two dynamic characters.",
+                                        "linkPath" : "https://github.com/zychjoe/RonYe",
+                                        "linkText" : "See the code"  },
+                                    { "name" : "TacoParser" ,
+                                      "img" : <img src={require("./assets/TacoParser_Log.gif")} width="350" height="200"></img> ,
+                                      "description" : "C# .NET Core application where I parse data from a csv file representing locations of US Taco Bells. I then use that data to determine which of the given locations are furthest apart. Tests are written using XUnit and results are logged.",
+                                      "linkPath" : "https://github.com/zychjoe/TacoParser",
                                       "linkText" : "See the code"  }]}
                           onClose={closeModal} />
         case ("education"):

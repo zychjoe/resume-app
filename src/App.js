@@ -11,7 +11,7 @@ import AboutMe from './AboutMe.js'
 function App() {
 
   const [progress, setProgress] = useState("default")
-  const user = users.find(u => u.id == "300000")
+  const user = users.find(u => u.id == "")
   const [isUser, setIsUser] = useState(user != undefined)
   
   const toInvestigate = () => {
