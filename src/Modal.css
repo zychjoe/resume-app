@@ -14,12 +14,39 @@
 
 .close-button {
     position: fixed;
+    height: 14px;
+    width: 14px;
     background-color: transparent;
     top: 5%;
-    right:  5%;
+    right:  6%;
     outline: none;
     border: none;
     z-index: 15;
+}
+
+@media screen and (min-width: 600px) {
+    .modal {
+        left: 20vw;
+        width: 60vw;
+    }
+
+    .close-button {
+        right:  22vw;
+        height: 16px;
+        width: 16px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .modal {
+        left: calc(50% - 330px);
+        width: 660px;
+    }
+
+    .close-button {
+        right:  calc(50% - 320px);
+    }
+
 }
 
 .content{

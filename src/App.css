@@ -9,3 +9,20 @@
   font-size: calc(10px + 2vmin);
   color: #FFFFFF; 
 }
+
+p.subtitle{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+a:link {
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited, a:hover, a:active {
+  color: #003527;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -1,0 +1,13 @@
+@media screen and (min-width: 600px) {
+    #about-me {
+        left: 20vw;
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #about-me {
+        left: calc(50% - 325px);
+        width: 650px;
+    }
+}
