@@ -37,7 +37,12 @@ function AboutMe(){
                           onClose={closeModal} />
         case ("projects"):
             return <Modal title="Projects"
-                          content={[{ "name" : "Photo Studio Contact App" ,
+                          content={[{ "name" : "Player Twordle" ,
+                                      "img" : <img src={require("./assets/Player-Twordle.gif")} width="200" height="400"></img> ,
+                                      "description" : "My Wordle clone is for two players using the same device. The first player chooses the word and the second player has five guesses to get it right. Utilized JS and React. I mostly made it so my partner and I had something to play together once we solved the NYT crossword.",
+                                      "linkPath" : "https://player-twordle.herokuapp.com",
+                                      "linkText" : "Play it!"  },
+                                    { "name" : "Photo Studio Contact App" ,
                                       "img" : <img src={require("./assets/ContactApp.gif")} width="200" height="320"></img> ,
                                       "description" : "This app was made to increase customer interaction with a small, body-positive portraiture studio. By integrating this app into the SquareSpace site and replacing the previous SquareSpace created contact form I increased user completion rates by over 30%.",
                                       "linkPath" : "https://whoyouareboudoir.com/contact",
